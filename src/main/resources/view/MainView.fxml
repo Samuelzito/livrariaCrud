@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="edu.Livraria.controller.LivroController" spacing="10" alignment="TOP_CENTER">
+    <TableView fx:id="tablaLivros" prefHeight="200.0" prefWidth="500.0">
+        <columns>
+            <TableColumn fx:id="colunaTitulo" text="Título" />
+            <TableColumn fx:id="colunaAutor" text="Autor" />
+            <TableColumn fx:id="colunaAno" text="Ano de Publicação" />
+            <TableColumn fx:id="colunaGenero" text="Gênero" />
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="campoTitulo" promptText="Título" />
+        <TextField fx:id="campoAutor" promptText="Autor" />
+        <TextField fx:id="campoAno" promptText="Ano de Publicação" />
+        <TextField fx:id="campoGenero" promptText="Gênero" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="btnCadastrar" text="Cadastrar" onAction="#cadastrarLivro" />
+        <Button fx:id="btnAtualizar" text="Atualizar" onAction="#atualizarLivro" />
+        <Button fx:id="btnExcluir" text="Excluir" onAction="#excluirLivro" />
+        <Button fx:id="btnListar" text="Listar" onAction="#listarLivros" />
+    </HBox>
+</VBox>
